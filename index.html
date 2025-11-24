@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Farmlink Gardens</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: url('000000171.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    header {
+      background: rgba(42, 124, 71, 0.8);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background: rgba(24, 90, 49, 0.8);
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 10px;
+    }
+
+    .card, .contact-box {
+      background: rgba(255, 255, 255, 0.95);
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: rgba(42, 124, 71, 0.8);
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background: #2a7c47;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background: #185a31;
+      transform: scale(1.05);
+    }
+
+    .book-now {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+      z-index: 999;
+    }
+
+    .book-now:hover {
+      background: #1ebe5d;
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 24px;
+      }
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+      section {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Farmlink Gardens</h1>
+  <p>Relax • Enjoy • Refresh</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#location">Location</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div style="text-align:center; padding:15px; background:#25D366;">
+  <a href="https://wa.me/254725960853" style="color:white; font-size:18px; text-decoration:none; font-weight:bold;">
+    Chat on WhatsApp: +254 725 960 853
+  </a>
+</div>
+
+<section id="about">
+  <div class="card">
+    <h2>About Farmlink Gardens</h2>
+    <p>Farmlink Gardens is your perfect getaway destination. We offer a peaceful environment, delicious meals, and fun activities for family, friends, and events. Visit us for relaxation, entertainment, and unforgettable memories.</p>
+  </div>
+</section>
+
+<section id="services">
+  <div class="card">
+    <h2>Our Services</h2>
+    <ul>
+      <li>✔ Swimming Pool (Adults & Kids)</li>
+      <li>✔ Restaurant & Outdoor Dining</li>
+      <li>✔ Kids Playground</li>
+      <li>✔ Meeting & Event Halls</li>
+      <li>✔ Private Booking for Parties & Occasions</li>
+    </ul>
+  </div>
+</section>
+
+<section id="location">
+  <div class="card">
+    <h2>Our Location</h2>
+    <p>We are located at Farmlink Gardens, near Kaathene Market, Maua – Meru County, Kenya.</p>
+    <p>
+      📍 Address: Farmlink Gardens, Kaathene, Maua – Meru County, Kenya <br>
+      👉 <a href="https://maps.app.goo.gl/KbveTmwsGtEC3PJo9?g_st=ac" target="_blank" style="color:#2a7c47; font-weight:bold;">
+        Open in Google Maps
+      </a>
+    </p>
+    <iframe src="https://maps.app.goo.gl/KbveTmwsGtEC3PJo9?g_st=ac"
+            width="100%" height="300" style="border:0; border-radius:10px;"></iframe>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact-box">
+    <h2>Contact & Booking</h2>
+    <p>You can contact us by email or send a WhatsApp message directly.</p>
+    
+    <form action="mailto:josephmutharimi@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="text" name="phone" placeholder="Your Phone Number" required />
+      <textarea name="message" placeholder="Your Message / Booking Details" rows="5" required></textarea>
+      <button type="submit">Send via Email</button>
+    </form>
+
+    <hr style="margin:20px 0;">
+
+    <form onsubmit="sendToWhatsApp(event)">
+      <input type="text" id="wa-name" placeholder="Your Name" required />
+      <input type="text" id="wa-phone" placeholder="Your Phone Number" required />
+      <input type="date" id="wa-date" required />
+      <textarea id="wa-message" placeholder="Your Message / Booking Details" rows="5" required></textarea>
+      <button type="submit">Send via WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<script>
+function sendToWhatsApp(event) {
+  event.preventDefault();
+  let name = document.getElementById("wa-name").value;
+  let phone = document.getElementById("wa-phone").value;
+  let date = document.getElementById("wa-date").value;
+  let message = document.getElementById("wa-message").value;
+  let whatsappNumber = "254725960853";
+  let text = `Hello, my name is ${name}.\nPhone: ${phone}\nBooking Date: ${date}\nMessage: ${message}`;
+  let url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+  window.open(url, "_blank");
+}
+</script>
+
+<footer>
+  <p>&copy; 2025 Farmlink Gardens. All rights reserved.</p>
+  <p>📍 Address: Farmlink Gardens, Kaathene, Maua – Meru County, Kenya</p>
+  <p>
+    👉 <a href="https://maps.app.goo.gl/KbveTmwsGtEC3PJo9?g_st=ac" target="_blank" style="color:white; font-weight:bold;">
+      Get Directions on Google Maps
+    </a>
+  </p>
+  <p>📞 Phone: +254 725 960 853</p>
+</footer>
+
+<a href="https://wa.me/254725960853?text=I%20would%20like%20to%20book%20a%20visit%20to%20Farmlink%20Gardens" 
+   class="book-now" target="_blank">📅 Book Now</a>
+
+</body>
+</html>
