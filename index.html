@@ -1,225 +1,434 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Farmlink Gardens</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background: url('000000171.jpg') no-repeat center center fixed;
-      background-size: cover;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    header {
-      background: rgba(42, 124, 71, 0.8);
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
+<title>Farmlink Gardens | Swimming Pool, Restaurant & Events Venue in Maua, Meru</title>
 
-    nav {
-      background: rgba(24, 90, 49, 0.8);
-      padding: 10px;
-      text-align: center;
-    }
+<meta name="description" content="Farmlink Gardens is a family-friendly destination in Maua, Meru County offering swimming pools, restaurant services, event venues, outdoor dining, kids playground and unforgettable experiences.">
 
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+<meta name="keywords" content="Farmlink Gardens, Maua, Meru, swimming pool, restaurant, events venue, family resort, outdoor dining, Kaathene">
 
-    section {
-      padding: 30px;
-      max-width: 1000px;
-      margin: auto;
-      background: rgba(255, 255, 255, 0.85);
-      border-radius: 10px;
-    }
+<meta name="author" content="Farmlink Gardens">
 
-    .card, .contact-box {
-      background: rgba(255, 255, 255, 0.95);
-      margin: 20px 0;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
+<meta property="og:title" content="Farmlink Gardens">
+<meta property="og:description" content="Relax • Enjoy • Refresh">
+<meta property="og:type" content="website">
+<meta property="og:image" content="000000171.jpg">
 
-    footer {
-      background: rgba(42, 124, 71, 0.8);
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 40px;
-    }
+<style>
 
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-    button {
-      background: #2a7c47;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
+html{
+scroll-behavior:smooth;
+}
 
-    button:hover {
-      background: #185a31;
-      transform: scale(1.05);
-    }
+body{
+font-family:Arial, sans-serif;
+line-height:1.6;
+color:#333;
+background:#f8f8f8;
+}
 
-    .book-now {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: white;
-      padding: 15px 25px;
-      border-radius: 50px;
-      font-weight: bold;
-      text-decoration: none;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      transition: all 0.3s ease;
-      z-index: 999;
-    }
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+url('000000171.jpg');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:20px;
+}
 
-    .book-now:hover {
-      background: #1ebe5d;
-      transform: scale(1.1);
-    }
+.hero-content h1{
+font-size:4rem;
+margin-bottom:15px;
+}
 
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 24px;
-      }
-      nav a {
-        display: block;
-        margin: 10px 0;
-      }
-      section {
-        padding: 20px;
-      }
-    }
-  </style>
+.hero-content p{
+font-size:1.3rem;
+margin-bottom:25px;
+}
+
+.hero-btn{
+display:inline-block;
+padding:15px 30px;
+background:#25D366;
+color:white;
+text-decoration:none;
+font-weight:bold;
+border-radius:50px;
+transition:0.3s;
+}
+
+.hero-btn:hover{
+transform:scale(1.05);
+}
+
+nav{
+background:#185a31;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav ul{
+display:flex;
+justify-content:center;
+list-style:none;
+flex-wrap:wrap;
+}
+
+nav ul li{
+margin:10px;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+.section{
+padding:70px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:40px;
+color:#185a31;
+font-size:2rem;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card h3{
+color:#185a31;
+margin-bottom:10px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:15px;
+}
+
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.contact{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+input,
+textarea{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+button{
+background:#185a31;
+color:white;
+padding:12px 20px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#2a7c47;
+}
+
+footer{
+background:#185a31;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:50px;
+}
+
+.book-now{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 25px;
+border-radius:50px;
+font-weight:bold;
+text-decoration:none;
+z-index:999;
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:2.5rem;
+}
+
+.hero-content p{
+font-size:1rem;
+}
+
+}
+
+</style>
 </head>
+
 <body>
 
-<header>
-  <h1>Farmlink Gardens</h1>
-  <p>Relax • Enjoy • Refresh</p>
-</header>
+<section class="hero">
+<div class="hero-content">
+<h1>Farmlink Gardens</h1>
+<p>Relax • Enjoy • Refresh</p>
+
+<a href="https://wa.me/254725960853?text=Hello%20Farmlink%20Gardens%2C%20I%20would%20like%20to%20make%20a%20booking."
+class="hero-btn">
+Book Your Visit
+</a>
+
+</div>
+</section>
 
 <nav>
-  <a href="#about">About</a>
-  <a href="#services">Services</a>
-  <a href="#location">Location</a>
-  <a href="#contact">Contact</a>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#location">Location</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 </nav>
 
-<div style="text-align:center; padding:15px; background:#25D366;">
-  <a href="https://wa.me/254725960853" style="color:white; font-size:18px; text-decoration:none; font-weight:bold;">
-    Chat on WhatsApp: +254 725 960 853
-  </a>
+<section id="about" class="section">
+<h2 class="section-title">About Us</h2>
+
+<div class="card">
+<p>
+Farmlink Gardens is a peaceful family destination located in Kaathene,
+Maua, Meru County. Whether you are looking for relaxation, family fun,
+great food, or a venue for your next event, we provide an unforgettable
+experience in a beautiful natural environment.
+</p>
 </div>
 
-<section id="about">
-  <div class="card">
-    <h2>About Farmlink Gardens</h2>
-    <p>Farmlink Gardens is your perfect getaway destination. We offer a peaceful environment, delicious meals, and fun activities for family, friends, and events. Visit us for relaxation, entertainment, and unforgettable memories.</p>
-  </div>
 </section>
 
-<section id="services">
-  <div class="card">
-    <h2>Our Services</h2>
-    <ul>
-      <li>✔ Swimming Pool (Adults & Kids)</li>
-      <li>✔ Restaurant & Outdoor Dining</li>
-      <li>✔ Kids Playground</li>
-      <li>✔ Meeting & Event Halls</li>
-      <li>✔ Private Booking for Parties & Occasions</li>
-    </ul>
-  </div>
+<section id="services" class="section">
+
+<h2 class="section-title">Our Services</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🏊 Swimming Pool</h3>
+<p>Clean and safe swimming pools for adults and children.</p>
+</div>
+
+<div class="card">
+<h3>🍽 Restaurant</h3>
+<p>Delicious meals and refreshing drinks served daily.</p>
+</div>
+
+<div class="card">
+<h3>🎉 Events & Parties</h3>
+<p>Perfect venue for birthdays, weddings and celebrations.</p>
+</div>
+
+<div class="card">
+<h3>👨‍👩‍👧‍👦 Family Fun</h3>
+<p>Kids playground and recreational activities for all ages.</p>
+</div>
+
+<div class="card">
+<h3>🏢 Meetings</h3>
+<p>Meeting halls suitable for business and community gatherings.</p>
+</div>
+
+<div class="card">
+<h3>🌳 Outdoor Experience</h3>
+<p>Enjoy nature in a peaceful and refreshing environment.</p>
+</div>
+
+</div>
+
 </section>
 
-<section id="location">
-  <div class="card">
-    <h2>Our Location</h2>
-    <p>We are located at Farmlink Gardens, near Kaathene Market, Maua – Meru County, Kenya.</p>
-    <p>
-      📍 Address: Farmlink Gardens, Kaathene, Maua – Meru County, Kenya <br>
-      👉 <a href="https://maps.app.goo.gl/KbveTmwsGtEC3PJo9?g_st=ac" target="_blank" style="color:#2a7c47; font-weight:bold;">
-        Open in Google Maps
-      </a>
-    </p>
-    <iframe src="https://maps.app.goo.gl/KbveTmwsGtEC3PJo9?g_st=ac"
-            width="100%" height="300" style="border:0; border-radius:10px;"></iframe>
-  </div>
+<section id="gallery" class="section">
+
+<h2 class="section-title">Gallery</h2>
+
+<div class="gallery">
+
+<img src="000000171.jpg" alt="Farmlink Gardens">
+
+<img src="000000171.jpg" alt="Swimming Pool">
+
+<img src="000000171.jpg" alt="Restaurant">
+
+</div>
+
 </section>
 
-<section id="contact">
-  <div class="contact-box">
-    <h2>Contact & Booking</h2>
-    <p>You can contact us by email or send a WhatsApp message directly.</p>
-    
-    <form action="mailto:josephmutharimi@gmail.com" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="text" name="phone" placeholder="Your Phone Number" required />
-      <textarea name="message" placeholder="Your Message / Booking Details" rows="5" required></textarea>
-      <button type="submit">Send via Email</button>
-    </form>
+<section id="location" class="section">
 
-    <hr style="margin:20px 0;">
+<h2 class="section-title">Our Location</h2>
 
-    <form onsubmit="sendToWhatsApp(event)">
-      <input type="text" id="wa-name" placeholder="Your Name" required />
-      <input type="text" id="wa-phone" placeholder="Your Phone Number" required />
-      <input type="date" id="wa-date" required />
-      <textarea id="wa-message" placeholder="Your Message / Booking Details" rows="5" required></textarea>
-      <button type="submit">Send via WhatsApp</button>
-    </form>
-  </div>
+<div class="card">
+
+<p>
+📍 Farmlink Gardens, Kaathene Market,
+Maua, Meru County, Kenya
+</p>
+
+<p>
+<a href="https://maps.app.goo.gl/KbveTmwsGtEC3PJo9?g_st=ac">
+Open Location on Google Maps
+</a>
+</p>
+
+</div>
+
 </section>
 
-<script>
-function sendToWhatsApp(event) {
-  event.preventDefault();
-  let name = document.getElementById("wa-name").value;
-  let phone = document.getElementById("wa-phone").value;
-  let date = document.getElementById("wa-date").value;
-  let message = document.getElementById("wa-message").value;
-  let whatsappNumber = "254725960853";
-  let text = `Hello, my name is ${name}.\nPhone: ${phone}\nBooking Date: ${date}\nMessage: ${message}`;
-  let url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
-  window.open(url, "_blank");
-}
-</script>
+<section id="contact" class="section">
+
+<h2 class="section-title">Contact & Booking</h2>
+
+<div class="contact">
+
+<p><strong>Phone:</strong> +254 725 960 853</p>
+
+<p><strong>Email:</strong> josephmutharimi@gmail.com</p>
+
+<form onsubmit="sendToWhatsApp(event)">
+
+<input type="text" id="wa-name"
+placeholder="Your Name" required>
+
+<input type="text" id="wa-phone"
+placeholder="Phone Number" required>
+
+<input type="date" id="wa-date"
+required>
+
+<textarea id="wa-message"
+placeholder="Booking Details"
+rows="5"
+required></textarea>
+
+<button type="submit">
+Send Booking via WhatsApp
+</button>
+
+</form>
+
+</div>
+
+</section>
 
 <footer>
-  <p>&copy; 2025 Farmlink Gardens. All rights reserved.</p>
-  <p>📍 Address: Farmlink Gardens, Kaathene, Maua – Meru County, Kenya</p>
-  <p>
-    👉 <a href="https://maps.app.goo.gl/KbveTmwsGtEC3PJo9?g_st=ac" target="_blank" style="color:white; font-weight:bold;">
-      Get Directions on Google Maps
-    </a>
-  </p>
-  <p>📞 Phone: +254 725 960 853</p>
+
+<h3>Farmlink Gardens</h3>
+
+<p>Relax • Enjoy • Refresh</p>
+
+<p>
+Kaathene, Maua, Meru County, Kenya
+</p>
+
+<p>
+Phone: +254 725 960 853
+</p>
+
+<p>
+© 2025 Farmlink Gardens. All Rights Reserved.
+</p>
+
 </footer>
 
-<a href="https://wa.me/254725960853?text=I%20would%20like%20to%20book%20a%20visit%20to%20Farmlink%20Gardens" 
-   class="book-now" target="_blank">📅 Book Now</a>
+<a href="https://wa.me/254725960853?text=Hello%20Farmlink%20Gardens%2C%20I%20would%20like%20to%20book%20a%20visit."
+class="book-now">
+📅 Book Now
+</a>
+
+<script>
+
+function sendToWhatsApp(event){
+
+event.preventDefault();
+
+let name=document.getElementById("wa-name").value;
+let phone=document.getElementById("wa-phone").value;
+let date=document.getElementById("wa-date").value;
+let message=document.getElementById("wa-message").value;
+
+let text=
+`Hello Farmlink Gardens,
+Name: ${name}
+Phone: ${phone}
+Booking Date: ${date}
+Message: ${message}`;
+
+window.open(
+`https://wa.me/254725960853?text=${encodeURIComponent(text)}`,
+"_blank"
+);
+
+}
+
+</script>
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"LocalBusiness",
+"name":"Farmlink Gardens",
+"telephone":"+254725960853",
+"address":{
+"@type":"PostalAddress",
+"streetAddress":"Kaathene",
+"addressLocality":"Maua",
+"addressRegion":"Meru County",
+"addressCountry":"KE"
+},
+"url":"https://daliizamvua.github.io/Farmlink-Gardenss/"
+}
+</script>
 
 </body>
 </html>
